@@ -1,0 +1,399 @@
+/* ========================================
+   VARIÁVEIS GLOBAIS
+======================================== */
+
+:root {
+    --bg: #0e1420;
+    --card: #161e2e;
+    --bd: #25304a;
+    --tx: #e6eaf2;
+    --mu: #8b97b0;
+
+    --g: #34d399;
+    --r: #f87171;
+    --y: #fbbf24;
+    --b: #60a5fa;
+}
+
+
+/* ========================================
+   RESET E ESTILOS GERAIS
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--tx);
+    font: 14px/1.5 "Segoe UI", system-ui, sans-serif;
+}
+
+
+/* ========================================
+   MENU LATERAL
+======================================== */
+
+#side {
+    width: 220px;
+    background: #0a0f18;
+    border-right: 1px solid var(--bd);
+    padding: 18px;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+#side h1 {
+    font-size: 18px;
+    margin: 0 0 20px;
+}
+
+#side a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--mu);
+    cursor: pointer;
+    margin-bottom: 4px;
+    transition: .2s;
+}
+
+#side a:hover,
+#side a.on {
+    background: var(--card);
+    color: var(--tx);
+}
+
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+main {
+    margin-left: 220px;
+    flex: 1;
+    padding: 20px;
+    min-width: 0;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+header {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+header #q {
+    flex: 1;
+    min-width: 150px;
+}
+
+
+/* ========================================
+   CAMPOS E BOTÕES
+======================================== */
+
+input,
+select,
+textarea,
+button {
+    background: var(--card);
+    color: var(--tx);
+    border: 1px solid var(--bd);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: var(--b);
+}
+
+button.pri {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+button.dng {
+    color: var(--r);
+}
+
+
+/* ========================================
+   GRIDS
+======================================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--bd);
+    border-radius: 12px;
+    padding: 14px;
+    animation: in .3s;
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: var(--mu);
+    font-weight: 500;
+}
+
+.big {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   ANIMAÇÕES
+======================================== */
+
+@keyframes in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ========================================
+   CORES DE STATUS
+======================================== */
+
+.pos {
+    color: var(--g);
+}
+
+.neg {
+    color: var(--r);
+}
+
+.pen {
+    color: var(--y);
+}
+
+
+/* ========================================
+   TABELAS
+======================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 8px;
+    border-bottom: 1px solid var(--bd);
+    text-align: left;
+}
+
+th {
+    color: var(--mu);
+    font-weight: 500;
+}
+
+
+/* ========================================
+   ETIQUETAS / TAGS
+======================================== */
+
+.tag {
+    padding: 2px 8px;
+    border-radius: 99px;
+    font-size: 12px;
+    border: 1px solid;
+}
+
+.tag.pago {
+    color: var(--g);
+}
+
+.tag.pendente {
+    color: var(--y);
+}
+
+.tag.vencido {
+    color: var(--r);
+}
+
+
+/* ========================================
+   ESTADOS VAZIOS
+======================================== */
+
+.empty {
+    color: var(--mu);
+    text-align: center;
+    padding: 24px;
+}
+
+
+/* ========================================
+   LINHAS FLEXÍVEIS
+======================================== */
+
+.row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+
+/* ========================================
+   GRÁFICOS
+======================================== */
+
+canvas {
+    width: 100%;
+    height: 240px;
+}
+
+
+/* ========================================
+   MODAIS
+======================================== */
+
+dialog {
+    background: var(--card);
+    color: var(--tx);
+    border: 1px solid var(--bd);
+    border-radius: 12px;
+    padding: 20px;
+    width: min(460px, 92vw);
+}
+
+dialog::backdrop {
+    background: #000a;
+}
+
+
+/* ========================================
+   FORMULÁRIOS
+======================================== */
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--mu);
+    font-size: 12px;
+}
+
+label input,
+label select,
+label textarea {
+    width: 100%;
+    margin-top: 3px;
+}
+
+
+/* ========================================
+   NOTIFICAÇÕES (TOASTS)
+======================================== */
+
+#toasts {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+}
+
+.toast {
+    background: var(--card);
+    border-left: 4px solid var(--g);
+    padding: 10px 14px;
+    margin-top: 8px;
+    border-radius: 8px;
+    animation: in .3s;
+}
+
+.toast.err {
+    border-color: var(--r);
+}
+
+
+/* ========================================
+   CALENDÁRIO
+======================================== */
+
+.cal {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.cal div {
+    background: var(--card);
+    border: 1px solid var(--bd);
+    border-radius: 8px;
+    min-height: 62px;
+    padding: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.cal .dot {
+    display: block;
+    height: 5px;
+    border-radius: 3px;
+    margin-top: 3px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 700px) {
+    #side {
+        position: static;
+        width: 100%;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    main {
+        margin: 0;
+    }
+}

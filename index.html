@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MeuControle</title>
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<aside id="side">
+    <h1>Meu Impostos</h1>
+    <nav>
+<a data-p="dashboard"> Inicio </a>
+<a data-p="receitas">Receitas</a>
+<a data-p="despesas"> Despesas</a>
+<a data-p="contas">Controle de contas</a>
+<a data-p="calendario">📅 Calendário</a>
+<a data-p="backup">💾 Backup</a>
+</nav>
+</aside>
+<main>
+    <header>
+        <input type="month" id="ym">
+        <input id="q" placeholder="Buscar movimentações...">
+        <button class="pri" id="newR">+ Receita</button><button class="pri" id="newD">+ Despesa</button>
+    </header>
+<section id="view"></section>
+</main><div id="toasts">
+
+</div><dialog id="dlg">
+
+</dialog>
+<script src="js/utils.js"></script>
+<script src="js/database.js"></script>
+<script src="js/finance.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/backup.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
